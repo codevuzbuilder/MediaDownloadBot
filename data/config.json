@@ -1,0 +1,128 @@
+{
+  "offset": 644480021,
+  "users": [
+    8646686927
+  ],
+  "emojis": {
+    "wave": {
+      "char": "👋",
+      "id": ""
+    },
+    "star": {
+      "char": "⭐",
+      "id": ""
+    },
+    "video": {
+      "char": "🎬",
+      "id": ""
+    },
+    "music": {
+      "char": "🎵",
+      "id": ""
+    },
+    "circle": {
+      "char": "⭕",
+      "id": ""
+    },
+    "effect": {
+      "char": "🎛",
+      "id": ""
+    },
+    "wait": {
+      "char": "⏳",
+      "id": ""
+    },
+    "ok": {
+      "char": "✅",
+      "id": ""
+    },
+    "err": {
+      "char": "❌",
+      "id": ""
+    },
+    "help": {
+      "char": "ℹ️",
+      "id": ""
+    },
+    "stats": {
+      "char": "📊",
+      "id": ""
+    },
+    "admin": {
+      "char": "🛠",
+      "id": ""
+    },
+    "send": {
+      "char": "📤",
+      "id": ""
+    },
+    "search": {
+      "char": "🔍",
+      "id": ""
+    },
+    "fire": {
+      "char": "🔥",
+      "id": ""
+    },
+    "trash": {
+      "char": "🗑",
+      "id": ""
+    }
+  },
+  "buttons": [
+    {
+      "id": "dl",
+      "text": "📥 Video yuklash",
+      "type": "message",
+      "color": "primary",
+      "icon": "",
+      "admin_only": false,
+      "value": "{e:video} Instagram, TikTok, YouTube, Facebook, Pinterest va boshqa platformalardan havolani yuboring."
+    },
+    {
+      "id": "music",
+      "text": "🎵 Qo'shiq yuklash",
+      "type": "feature",
+      "value": "music",
+      "color": "success",
+      "icon": "",
+      "admin_only": false
+    },
+    {
+      "id": "circle",
+      "text": "⭕ Dumaloq video",
+      "type": "message",
+      "color": "primary",
+      "icon": "",
+      "admin_only": false,
+      "value": "{e:circle} Video yuboring, uni dumaloq videoga aylantiraman."
+    },
+    {
+      "id": "fx",
+      "text": "🎛 Effektlar",
+      "type": "message",
+      "color": "danger",
+      "icon": "",
+      "admin_only": false,
+      "value": "{e:effect} Audio yoki video yuboring: slowed, remix, concert hall, bass effektlarini qo'shaman."
+    },
+    {
+      "id": "help",
+      "text": "ℹ️ Yordam",
+      "type": "message",
+      "color": "",
+      "icon": "",
+      "admin_only": false,
+      "value": "{e:help} Havola yuboring, qo'shiq nomini yozing yoki tugmalardan foydalaning."
+    },
+    {
+      "id": "admin",
+      "text": "🛠 Admin panel",
+      "type": "feature",
+      "value": "admin",
+      "color": "danger",
+      "icon": "",
+      "admin_only": true
+    }
+  ]
+}
