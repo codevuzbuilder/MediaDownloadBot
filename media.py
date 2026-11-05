@@ -12,6 +12,9 @@ EFFECTS = {
     "nightcore": ("⚡ Nightcore", "asetrate=44100*1.25,aresample=44100"),
 }
 
+# YouTube bloklamasini kamaytirish uchun mobil/boshqa klientlar
+YT_ARGS = {"youtube": {"player_client": ["android", "ios", "web_creator"]}}
+
 
 def _ff(*args):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *args], check=True, timeout=900)
@@ -23,7 +26,15 @@ def _largest(d, exts):
 
 
 def _ydl(opts, url):
-    base = {"quiet": True, "no_warnings": True, "noplaylist": True, "socket_timeout": 30}
+    base = {
+        "quiet": True,
+        "no_warnings": True,
+        "noplaylist": True,
+        "socket_timeout": 30,
+        "extractor_args": YT_ARGS,
+    }
+    if os.path.exists("cookies.txt"):
+        base["cookiefile"] = "cookies.txt"
     base.update(opts)
     with yt_dlp.YoutubeDL(base) as y:
         return y.extract_info(url, download=True)
