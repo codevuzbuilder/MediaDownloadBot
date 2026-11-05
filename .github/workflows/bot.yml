@@ -28,16 +28,19 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y ffmpeg
 
       - name: Kutubxonalar
-        run: pip install -r requirements.txt
+        run: pip install -U -r requirements.txt
 
       - name: Botni ishga tushirish
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           ADMIN_ID: ${{ secrets.ADMIN_ID }}
+          YT_COOKIES: ${{ secrets.YT_COOKIES }}
           RUN_SECONDS: "20700"
-        run: python bot.py
+        run: |
+          if [ -n "$YT_COOKIES" ]; then printf '%s\n' "$YT_COOKIES" > cookies.txt; fi
+          python bot.py
 
-      - name: Holatni saqlash
+      - name: Holatni saqlash (offset, sozlamalar)
         if: always()
         run: |
           if [ -d data ]; then
